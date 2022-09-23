@@ -3,7 +3,7 @@
 
 /* ---------------------------- VARIABLE CSS ---------------------------- */
 :root {
-    --header--height: 3rem;
+    --header-height: 3rem;
 
 
     /* ------- Colors ------- */
@@ -140,7 +140,7 @@ img {
 }
 
 .grid {
-  display: grid;
+    display: grid;
     gap: 1.5rem
 } 
 
@@ -169,21 +169,28 @@ img {
 
 /* ---------- BREAKPOINTS ---------- */
 /* large devices */
-@media screen and (max-widht: 992px) {
+@media screen and (max-width: 992px) {
+    .container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
 
 }
 
 /* medium devices */
-@media screen and (max-widht: 768px) {
+@media screen and (max-width: 768px) {
 
 }
 
-@media screen and (max-widht: 576px) {
+@media screen and (max-width: 576px) {
 
 }
 
 /* small devices */
 
-@media screen and (max-widht: 350px) {
-
+@media screen and (max-width: 350px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
 }
