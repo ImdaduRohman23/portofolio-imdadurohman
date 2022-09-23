@@ -140,6 +140,7 @@ img {
 }
 
 .grid {
+  display: grid;
     gap: 1.5rem
 } 
 
@@ -164,4 +165,25 @@ img {
 .button--flex {
     display: inline-flex;
     align-items: center;
+}
+
+/* ---------- BREAKPOINTS ---------- */
+/* large devices */
+@media screen and (max-widht: 992px) {
+
+}
+
+/* medium devices */
+@media screen and (max-widht: 768px) {
+
+}
+
+@media screen and (max-widht: 576px) {
+
+}
+
+/* small devices */
+
+@media screen and (max-widht: 350px) {
+
 }
