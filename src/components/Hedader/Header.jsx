@@ -1,13 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
 import './header.css'
+import logo from '../../assets/logo2.svg'
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     return (
         <div className="header">
             <nav className="nav container">
-                <a href="index.html" className="nav__log">imdadu</a>
+                <a href="index.html" className="nav__logo">
+                    <img src={logo} alt="" />
+                </a>
 
                 <div className={toggle? "nav__menu show-menu" : "nav__menu"}>
                     <ul className="nav__list grid">
