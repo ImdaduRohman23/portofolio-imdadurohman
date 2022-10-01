@@ -1,9 +1,10 @@
 import React from 'react'
+import './services.css'
 
 const Services = () => {
     return (
         <section className="services section">
-            <h2 className="section__services">Services</h2>
+            <h2 className="section__title">Services</h2>
             <span className="section__subtitle">Waht i offer</span>
         
             <div className="services__container container grid">
@@ -17,7 +18,7 @@ const Services = () => {
 
                     <span className="services__button">
                         View More{" "}
-                        <i className="uil uil-arrow-rifht"></i>
+                        <i className="uil uil-arrow-right services__button-icon" ></i>
                     </span>
 
                     <div className="services__modal">
@@ -67,7 +68,7 @@ const Services = () => {
 
                     <span className="services__button">
                         View More {" "}
-                        <i className="uil uil-arrow-rifht"></i>
+                        <i className="uil uil-arrow-right services__button-icon"></i>
                     </span>
 
                     <div className="services__modal">
@@ -117,7 +118,7 @@ const Services = () => {
 
                     <span className="services__button">
                         View More
-                        <i className="uil uil-arrow-rifht"></i>
+                        <i className="uil uil-arrow-right services__button-icon"></i>
                     </span>
 
                     <div className="services__modal">
