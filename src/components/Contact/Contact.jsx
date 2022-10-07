@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './contact.css'
 
     const Contact = () => {
     return (
-        <section className="contact section">
+        <section className="contact section" id='contact'>
             <h2 className="section__title">Get in touch</h2>
             <span className="section__subtitle">Contact Me</span>
 
@@ -59,9 +60,9 @@ import React from 'react'
                             <input type="email" name='email' className="contact__form-input" placeholder='Insert your email'/>
                         </div>
 
-                        <div className="contact__form-div">
+                        <div className="contact__form-div contact__form-area">
                             <label className="contact__form-tag">Project</label>
-                            <textarea name="project" cols="30" rows="10" placeholder='Write your project'></textarea>
+                            <textarea name="project" cols="30" rows="10" placeholder='Write your project' className='contact__form-input'></textarea>
                         </div>
 
                         <button href="#contact" className="button button--flex">
@@ -83,7 +84,7 @@ import React from 'react'
                                     fill="var(--container-color)"
                                 ></path>
                             </svg>
-                        </button>
+                        </button>x
 
                     </form>
                 </div>
