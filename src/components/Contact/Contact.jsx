@@ -84,7 +84,7 @@ import './contact.css'
                                     fill="var(--container-color)"
                                 ></path>
                             </svg>
-                        </button>x
+                        </button>
 
                     </form>
                 </div>
