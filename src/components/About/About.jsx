@@ -2,7 +2,7 @@ import React from 'react';
 import './about.css';
 import aboutImg from '../../assets/porto1.JPG'
 // import Info from './Info';
-import CV from '../../assets/CV-ImdaduRohman.pdf'
+import Cv from '../../assets/cv.pdf'
 
 const About = () => {
     return (
@@ -11,7 +11,7 @@ const About = () => {
             <span className="section__subtitle">My Introduction</span>
 
             <div className="about__container container grid">
-                <img src={aboutImg } className="about__img" />
+                <img src={aboutImg } className="about__img" alt='about'/>
 
                 <div className="about__data">
                     {/* <Info /> */}
@@ -20,7 +20,7 @@ const About = () => {
                     Hard worker, likes challenges, and very interested in technology. Skilled and experienced in designing, developing, and testing websites using up-to-date technologies. Eager to face more challenges regarding ways to optimize user experience. Equally good in individual and team work.
                     </p>
 
-                    <a download="" href={CV} className="button button--flex">
+                    <a download="" href={Cv} className="button button--flex">
                         Download CV
                         <svg
                             class="button__icon"
