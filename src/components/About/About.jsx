@@ -1,9 +1,8 @@
 import React from 'react';
 import './about.css';
-import aboutImg from '../../assets/porto1.JPG'
+import aboutImg from '../../assets/porto1.JPG';
 // import Info from './Info';
-import Cv from '../../assets/cv.pdf'
-
+import cv from '../../assets/cv.pdf'
 const About = () => {
     return (
         <section className="about section" id='about'>
@@ -20,7 +19,7 @@ const About = () => {
                     Hard worker, likes challenges, and very interested in technology. Skilled and experienced in designing, developing, and testing websites using up-to-date technologies. Eager to face more challenges regarding ways to optimize user experience. Equally good in individual and team work.
                     </p>
 
-                    <a download="" href={Cv} className="button button--flex">
+                    <a href={cv} className="button button--flex">
                         Download CV
                         <svg
                             class="button__icon"
