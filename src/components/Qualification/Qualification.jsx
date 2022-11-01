@@ -162,7 +162,7 @@ const Qualification = () => {
                 <div className="porto-container">
                     <div className="porto-content-left">
                         <img src={porto1} alt="" />
-                        <a href="https://binar-car-rental-platinum.netlify.app" target="_blank" rel="noreferrer">
+                        <a href="https://binar-car-rental-platinum.netlify.app">
                             <p>
                                 This is an online car rental website which can
                                 display data from the back-end API and can
@@ -175,7 +175,7 @@ const Qualification = () => {
                     </div>
                     <div className="porto-content-right">
                         <img src={porto2} alt="" />
-                        <a href="https://binar-car-rental-admin.netlify.app" target="_blank" rel="noreferrer">
+                        <a href="https://binar-car-rental-admin.netlify.app">
                             <p>
                                 This application that built with React.Js. As a
                                 admin in this application you can see order details

@@ -24,8 +24,9 @@
     margin-top: 20px;
 }
 
-.porto-content a {
-    text-decoration: none;
+.porto-content-left a:hover,
+.porto-content-right a:hover {
+    color: black;
 }
 
 .porto-content p:hover {
