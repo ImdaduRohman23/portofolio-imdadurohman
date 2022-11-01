@@ -160,7 +160,7 @@ const Qualification = () => {
 
             <div className="porto">
                 <div className="porto-container">
-                    <div className="porto-content-left">
+                    <div className="porto-content">
                         <img src={porto1} alt="" />
                         <a href="https://binar-car-rental-platinum.netlify.app">
                             <p>
@@ -173,7 +173,7 @@ const Qualification = () => {
                             </p>
                         </a>
                     </div>
-                    <div className="porto-content-right">
+                    <div className="porto-content">
                         <img src={porto2} alt="" />
                         <a href="https://binar-car-rental-admin.netlify.app">
                             <p>
