@@ -4,8 +4,8 @@ import Contact from './components/Contact/Contact';
 import Header from './components/Hedader/Header';
 import Home from './components/Home/Home';
 import Qualification from './components/Qualification/Qualification';
-import Services from './components/Services/Services';
-import Skills from './components/Skills/Skills';
+// import Services from './components/Services/Services';
+// import Skills from './components/Skills/Skills';
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <main className="main">
         <Home />
         <About />
-        <Skills />
-        <Services />
+        {/* <Skills /> */}
+        {/* <Services /> */}
         <Qualification />
         <Contact />
       </main>

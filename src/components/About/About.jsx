@@ -14,10 +14,10 @@ const About = () => {
                 <img src={aboutImg } className="about__img" />
 
                 <div className="about__data">
-                    <Info />
+                    {/* <Info /> */}
 
                     <p className="about__description">
-                        Frontend developer, I create web pages with UI / UX user interface, I have years of experience and many clients are happy with the projects carried out.
+                    Hard worker, likes challenges, and very interested in technology. Skilled and experienced in designing, developing, and testing websites using up-to-date technologies. Eager to face more challenges regarding ways to optimize user experience. Equally good in individual and team work.
                     </p>
 
                     <a download="" href={CV} className="button button--flex">

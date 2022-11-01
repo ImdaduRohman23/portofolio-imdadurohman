@@ -3,14 +3,14 @@ import './contact.css'
 import emailjs from '@emailjs/browser';
 
     const Contact = () => {
-        const form = useRef();
+    const form = useRef();
 
-        const sendEmail = (e) => {
-        e.preventDefault();
+    const sendEmail = (e) => {
+    e.preventDefault();
 
-        emailjs.sendForm('service_3j5tbgp', 'template_xxuuver', form.current, 'JVggHlY8p0FF35Dxt')
-            e.target.reset();
-        };
+    emailjs.sendForm('service_3j5tbgp', 'template_xxuuver', form.current, 'JVggHlY8p0FF35Dxt')
+        e.target.reset();
+    };
 
 
     return (

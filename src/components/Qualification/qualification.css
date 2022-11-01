@@ -1,0 +1,41 @@
+.porto {
+    display: flex;
+    justify-content: center;
+}
+
+.porto-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.porto-content-left,
+.porto-content-right {
+    width: 50%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.porto-content p {
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.porto-content a {
+    text-decoration: none;
+}
+
+.porto-content p:hover {
+    color: black;
+}
+
+
+/* @media screen and (max-width: 768px) {
+    .porto-content-left,
+    .porto-content-right {
+        width: ;
+    }
+} */

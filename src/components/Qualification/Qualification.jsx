@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './qualification.css';
+import porto1 from '../../assets/porto1.svg';
+import porto2 from '../../assets/porto2.png'
+
 
 const Qualification = () => {
     return (
-        <section className="qualification section">
-            <h2 className="section__title">Qualification</h2>
-            <span className="section__subtitle">My personel journey</span>
-        
-            <div className="qualification__container container">
+        <section className="qualification section" id='portofolio'>
+            <h2 className="section__title">My Portofolio</h2>
+            <span className="section__subtitle">Project</span>       
+            {/* <div className="qualification__container container">
                 <div className="qualification__tabs">
                     <div className="qualification__button qualification__active button--flex">
                         <i className="uil uil-graduation-cap qualification__icon"></i>
@@ -153,6 +156,36 @@ const Qualification = () => {
                     </div>
                 </div>
 
+            </div> */}
+
+            <div className="porto">
+                <div className="porto-container">
+                    <div className="porto-content-left">
+                        <img src={porto1} alt="" />
+                        <a href="https://binar-car-rental-platinum.netlify.app" target="_blank" rel="noreferrer">
+                            <p>
+                                This is an online car rental website which can
+                                display data from the back-end API and can
+                                interact with costumers. This application that built
+                                with React.Js. As a customer in this application
+                                you can search the available car, determine the
+                                date of renting, and make a payment.
+                            </p>
+                        </a>
+                    </div>
+                    <div className="porto-content-right">
+                        <img src={porto2} alt="" />
+                        <a href="https://binar-car-rental-admin.netlify.app" target="_blank" rel="noreferrer">
+                            <p>
+                                This application that built with React.Js. As a
+                                admin in this application you can see order details
+                                rented by costumers and there is a CRUD feature
+                                (create, read, update, delete) for data settings for
+                                cars to be rented.
+                            </p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     )
