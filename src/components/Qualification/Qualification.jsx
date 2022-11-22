@@ -9,7 +9,7 @@ import booksearch from '../../assets/booksearch.png';
 
 const Qualification = () => {
     return (
-        <div className="qualification">
+        <div className="qualification" id='portofolio'>
             <h2 className="section__title">My Portofolio</h2>
             <span className="section__subtitle">Project</span>
             <div className="qualification__porto">
