@@ -16,7 +16,7 @@ const Qualification = () => {
                 <div className="porto__item">
                     <img src={porto1} alt="" />
                     <p>
-                        his is an online car rental website which can
+                        This is an online car rental website which can
                         display data from the back-end API and can
                         interact with costumers. This application that built
                         with React.Js. As a customer in this application
@@ -27,7 +27,7 @@ const Qualification = () => {
                 <div className="porto__item">
                     <img src={porto2} alt="" />
                     <p>
-                        This application that built with React.Js. As a
+                        This application that built with React.Js and uses Redux for state management. As a
                         admin in this application you can see order details
                         rented by costumers and there is a CRUD feature
                         (create, read, update, delete) for data settings for
@@ -39,13 +39,14 @@ const Qualification = () => {
                     <p>
                     This application that built with React.Js. This game
                     is played by pitting fingers against the computer to
-                    determine who wins. (<a href="https://suit-jawa-game.netlify.app/" target='blank'>view</a>)
+                    determine who wins. There is also a feature to set the level of difficulty. (<a href="https://suit-jawa-game.netlify.app/" target='blank'>view</a>)
                     </p>
                 </div>
                 <div className="porto__item">
                     <img src={booksearch} alt="" />
                     <p>
-                    This application that built with React.Js. This application will assist users in searching for books and provide the required information. (<a href="https://cari-buku.netlify.app/" target='blank'>view</a>)
+                    This application that built with React.Js and uses Context for state management. 
+                    By using data api from Google Books APIs, this application will assist users in searching for books and provide the required information. (<a href="https://cari-buku.netlify.app/" target='blank'>view</a>)
                     </p>
                 </div>
             </div>
