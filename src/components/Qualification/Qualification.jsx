@@ -6,6 +6,7 @@ import quran from '../../assets/quran.png';
 import suit from '../../assets/suitjawa.png';
 import todo from '../../assets/todo.png';
 import tontoninaja from '../../assets/tontoninaja.png';
+import hoobank from '../../assets/hoobank.png';
 
 
 
@@ -72,7 +73,14 @@ const Qualification = () => {
                         (<a href="https://my-todos-ir.netlify.app/" target='blank'>view</a>)
                     </p>
                 </div>
-
+                <div className="porto__item">
+                    <img src={hoobank} alt="tontoninaja web app" />
+                    <p>
+                    This is landing page of Hoo Bank. 
+                    This website that built with React.Js and Tailwindcss so it is very dynamic and responsive to user.  
+                    (<a href="https://hoobank-tailwind.netlify.app" target='blank'>view</a>)
+                    </p>
+                </div>
             </div>
         </div>
     )
