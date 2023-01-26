@@ -1,12 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
-import './header.css'
-import logo from '../../assets/logo2.svg'
+import './header.css';
+import logo from '../../assets/logo2.svg';
+import { motion } from 'framer-motion';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     return (
-        <div className="header">
+        <motion.div 
+            className="header"
+            initial={{
+                y: -200,
+                opacity: 0
+            }}
+            animate={{
+                y: 0,
+                opacity: 1
+            }}
+            transition={{
+                type: 'tween',
+                duration: 1,
+            }}
+        >
             <nav className="nav container">
                 <a href="index.html" className="nav__logo">
                     <img src={logo} alt="" />
@@ -57,7 +72,7 @@ const Header = () => {
                     <i className="uil uil-apps"></i>
                 </div>
             </nav>
-        </div>
+        </motion.div>
     )
 }
 

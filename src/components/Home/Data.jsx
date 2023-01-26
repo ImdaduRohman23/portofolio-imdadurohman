@@ -1,8 +1,22 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const dataVariant = {
+    hidden: {x: '-200vh'},
+    visible: {
+        x: 0,
+        transition: {
+            duration: 1,
+            delay: 1
+        }
+    }
+}
 
 const Data = () => {
     return (
-        <div className="home__data">
+        <motion.div className="home__data"
+            variants={dataVariant}
+        >
             <h1 className="home__title">
                 Imdadu Rohman
                 <svg
@@ -78,7 +92,7 @@ const Data = () => {
                     ></path>
                 </svg>
             </a>
-        </div>
+        </motion.div>
     )
 }
 
