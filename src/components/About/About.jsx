@@ -3,14 +3,76 @@ import aboutImg from '../../assets/porto1.JPG';
 import resume from '../../assets/resume.pdf';
 import './about.css';
 // import Info from './Info';
+import { motion } from 'framer-motion';
+
+const aboutVariant = {
+    hidden: {
+        opacity: 0,
+        x: '-100%'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: .5,
+            duration: 1,
+            ease: 'easeOut',
+        }
+    }
+}
+
+const introVariant = {
+    hidden: {
+        opacity: 0,
+        x: '100%'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: .5,
+            duration: 1,
+            ease: 'easeOut',
+        }
+    }
+}
 
 const About = () => {
     return (
         <section className="about section" id='about'>
-            <h2 className="section__title">About Me</h2>
-            <span className="section__subtitle">My Introduction</span>
+            <motion.h2 
+                className="section__title"
+                variants={aboutVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true}}
+            >
+                About Me
+            </motion.h2>
+            <motion.span 
+                className="section__subtitle"
+                variants={introVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true}}
+            >
+                My Introduction
+            </motion.span>
 
-            <div className="about__container container grid">
+            <motion.div 
+                className="about__container container grid"
+                initial={{
+                    opacity: 0
+                }}
+                whileInView={{
+                    opacity: 1,
+                }}
+                transition={{
+                    delay: 1.7,
+                    duration: 1
+                }}
+                viewport={{once: true}}
+            >
                 <img src={aboutImg } className="about__img" alt='about'/>
 
                 <div className="about__data">
@@ -49,7 +111,7 @@ const About = () => {
                         </svg>
                     </a>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
