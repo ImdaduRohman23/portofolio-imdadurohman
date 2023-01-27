@@ -7,15 +7,75 @@ import suit from '../../assets/suitjawa.png';
 import todo from '../../assets/todo.png';
 import tontoninaja from '../../assets/tontoninaja.png';
 import hoobank from '../../assets/hoobank.png';
+import { motion } from 'framer-motion';
 
+const myportoVariant = {
+    hidden: {
+        opacity: 0,
+        x: '-100%'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: .5,
+            duration: 1,
+            ease: 'easeOut',
+        }
+    }
+}
 
+const projectVariant = {
+    hidden: {
+        opacity: 0,
+        x: '100%'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: .5,
+            duration: 1,
+            ease: 'easeOut',
+        }
+    }
+}
 
 const Qualification = () => {
     return (
         <div className="qualification" id='portofolio'>
-            <h2 className="section__title">My Portofolio</h2>
-            <span className="section__subtitle">Project</span>
-            <div className="qualification__porto">
+            <motion.h2 
+                className="section__title"
+                variants={myportoVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true}}
+            >
+                My Portofolio
+            </motion.h2>
+            <motion.span 
+                className="section__subtitle"
+                variants={projectVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true}}
+            >
+                Project
+            </motion.span>
+            <motion.div 
+                className="qualification__porto"
+                initial={{
+                    opacity: 0
+                }}
+                whileInView={{
+                    opacity: 1,
+                }}
+                transition={{
+                    delay: 1.7,
+                    duration: 1
+                }}
+                viewport={{once: true}}
+            >
                 <div className="porto__item">
                     <img src={porto1} alt="bcr website costumers" />
                     <p>
@@ -81,7 +141,7 @@ const Qualification = () => {
                     (<a href="https://hoobank-tailwind.netlify.app" target='blank'>view</a>)
                     </p>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

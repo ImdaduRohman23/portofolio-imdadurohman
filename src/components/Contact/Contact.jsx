@@ -1,6 +1,39 @@
 import React, { useRef } from 'react';
 import './contact.css'
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+
+const getinVariant = {
+    hidden: {
+        opacity: 0,
+        x: '-100%'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: .5,
+            duration: 1,
+            ease: 'easeOut',
+        }
+    }
+}
+
+const contactVariant = {
+    hidden: {
+        opacity: 0,
+        x: '100%'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: .5,
+            duration: 1,
+            ease: 'easeOut',
+        }
+    }
+}
 
     const Contact = () => {
     const form = useRef();
@@ -15,10 +48,39 @@ import emailjs from '@emailjs/browser';
 
     return (
         <section className="contact section" id='contact'>
-            <h2 className="section__title">Get in touch</h2>
-            <span className="section__subtitle">Contact Me</span>
+            <motion.h2 
+                className="section__title"
+                variants={getinVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true}}
+            >
+                Get in touch
+            </motion.h2>
+            <motion.span 
+                className="section__subtitle"
+                variants={contactVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true}}
+            >
+                Contact Me
+            </motion.span>
 
-            <div className="contact__container container grid">
+            <motion.div 
+                className="contact__container container grid"
+                initial={{
+                    opacity: 0
+                }}
+                whileInView={{
+                    opacity: 1,
+                }}
+                transition={{
+                    delay: 1.7,
+                    duration: 1
+                }}
+                viewport={{once: true}}
+            >
                 <div className="contact__content">
                     <h3 className="contact__title">Talk to me</h3>
 
@@ -100,7 +162,7 @@ import emailjs from '@emailjs/browser';
                     </form>
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     )
 }
