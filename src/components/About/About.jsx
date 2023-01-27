@@ -2,47 +2,15 @@ import React from 'react';
 import aboutImg from '../../assets/porto1.JPG';
 import resume from '../../assets/resume.pdf';
 import './about.css';
-// import Info from './Info';
 import { motion } from 'framer-motion';
-
-const aboutVariant = {
-    hidden: {
-        opacity: 0,
-        x: '-100%'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: .5,
-            duration: 1,
-            ease: 'easeOut',
-        }
-    }
-}
-
-const introVariant = {
-    hidden: {
-        opacity: 0,
-        x: '100%'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: .5,
-            duration: 1,
-            ease: 'easeOut',
-        }
-    }
-}
+import { titleVariant, subTitleVariant, contentVariant } from '../../utils/motion';
 
 const About = () => {
     return (
         <section className="about section" id='about'>
             <motion.h2 
                 className="section__title"
-                variants={aboutVariant}
+                variants={titleVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
@@ -51,7 +19,7 @@ const About = () => {
             </motion.h2>
             <motion.span 
                 className="section__subtitle"
-                variants={introVariant}
+                variants={subTitleVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
@@ -61,16 +29,9 @@ const About = () => {
 
             <motion.div 
                 className="about__container container grid"
-                initial={{
-                    opacity: 0
-                }}
-                whileInView={{
-                    opacity: 1,
-                }}
-                transition={{
-                    delay: 1.7,
-                    duration: 1
-                }}
+                variants={contentVariant}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{once: true}}
             >
                 <img src={aboutImg } className="about__img" alt='about'/>

@@ -8,45 +8,14 @@ import todo from '../../assets/todo.png';
 import tontoninaja from '../../assets/tontoninaja.png';
 import hoobank from '../../assets/hoobank.png';
 import { motion } from 'framer-motion';
-
-const myportoVariant = {
-    hidden: {
-        opacity: 0,
-        x: '-100%'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: .5,
-            duration: 1,
-            ease: 'easeOut',
-        }
-    }
-}
-
-const projectVariant = {
-    hidden: {
-        opacity: 0,
-        x: '100%'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: .5,
-            duration: 1,
-            ease: 'easeOut',
-        }
-    }
-}
+import { titleVariant, subTitleVariant, portoVariant } from '../../utils/motion';
 
 const Qualification = () => {
     return (
         <div className="qualification" id='portofolio'>
             <motion.h2 
                 className="section__title"
-                variants={myportoVariant}
+                variants={titleVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
@@ -55,28 +24,27 @@ const Qualification = () => {
             </motion.h2>
             <motion.span 
                 className="section__subtitle"
-                variants={projectVariant}
+                variants={subTitleVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
             >
                 Project
             </motion.span>
-            <motion.div 
+            <div 
                 className="qualification__porto"
-                initial={{
-                    opacity: 0
-                }}
-                whileInView={{
-                    opacity: 1,
-                }}
-                transition={{
-                    delay: 1.7,
-                    duration: 1
-                }}
-                viewport={{once: true}}
+                // variants={contentVariant}
+                // initial="hidden"
+                // whileInView="visible"
+                // viewport={{once: true}}
             >
-                <div className="porto__item">
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={porto1} alt="bcr website costumers" />
                     <p>
                         This is an online car rental website which can
@@ -86,8 +54,14 @@ const Qualification = () => {
                         you can search the available car, determine the
                         ate of renting, and make a payment. (<a href="https://binar-car-rental-platinum.netlify.app" target='blank'>view</a>)
                     </p>
-                </div>
-                <div className="porto__item">
+                </motion.div>
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={porto2} alt="bcr website admin" />
                     <p>
                         This application that built with React.Js and uses Redux for state management. As a
@@ -96,8 +70,14 @@ const Qualification = () => {
                         (create, read, update, delete) for data settings for
                         cars to be rented. (<a href="https://binar-car-rental-admin.netlify.app" target='blank'>view</a>)
                     </p>
-                </div>
-                <div className="porto__item">
+                </motion.div>
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={quran} alt="D'Quran web app" />
                     <p>
                         D'Quran is a digital Al-Quran web application.
@@ -105,8 +85,14 @@ const Qualification = () => {
                         By utilized API data from the Ministry of Religion of the Republic of Indonesia, this application allows users to read and listen the Al-Qur'an based on the selected letter of Qur'an. 
                         (<a href="https://d-quran.netlify.app/" target='blank'>view</a>)
                     </p>
-                </div>
-                <div className="porto__item">
+                </motion.div>
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={tontoninaja} alt="tontoninaja web app" />
                     <p>
                     Tontoninaja is a YouTube clone web application. 
@@ -115,16 +101,28 @@ const Qualification = () => {
                     Utilized API data from Rapid API to display the required data.
                     (<a href="https://tontoninaja.netlify.app/" target='blank'>view</a>)
                     </p>
-                </div>
-                <div className="porto__item">
+                </motion.div>
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={suit} alt="suitjawa web app" />
                     <p>
                     This application that built with React.Js. This game
                     is played by pitting fingers against the computer to
                     determine who wins. There is also a feature to set the level of difficulty. (<a href="https://suit-jawa-game.netlify.app/" target='blank'>view</a>)
                     </p>
-                </div>
-                <div className="porto__item">
+                </motion.div>
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={todo} alt="todo web app" />
                     <p>
                         My Todo is a to do list web application to organize the list of jobs to be completed by the user. 
@@ -132,16 +130,22 @@ const Qualification = () => {
                         This application provided 4 features to organize those todos: create , edit , done, and delete. 
                         (<a href="https://my-todos-ir.netlify.app/" target='blank'>view</a>)
                     </p>
-                </div>
-                <div className="porto__item">
+                </motion.div>
+                <motion.div 
+                    className="porto__item"
+                    variants={portoVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                >
                     <img src={hoobank} alt="tontoninaja web app" />
                     <p>
                     This is landing page of Hoo Bank. 
                     This website that built with React.Js and Tailwindcss so it is very dynamic and responsive to user.  
                     (<a href="https://hoobank-tailwind.netlify.app" target='blank'>view</a>)
                     </p>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
         </div>
     )
 }

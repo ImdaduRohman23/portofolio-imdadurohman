@@ -2,38 +2,7 @@ import React, { useRef } from 'react';
 import './contact.css'
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-
-const getinVariant = {
-    hidden: {
-        opacity: 0,
-        x: '-100%'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: .5,
-            duration: 1,
-            ease: 'easeOut',
-        }
-    }
-}
-
-const contactVariant = {
-    hidden: {
-        opacity: 0,
-        x: '100%'
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: .5,
-            duration: 1,
-            ease: 'easeOut',
-        }
-    }
-}
+import { titleVariant, subTitleVariant, contentVariant } from '../../utils/motion';
 
     const Contact = () => {
     const form = useRef();
@@ -50,7 +19,7 @@ const contactVariant = {
         <section className="contact section" id='contact'>
             <motion.h2 
                 className="section__title"
-                variants={getinVariant}
+                variants={titleVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
@@ -59,7 +28,7 @@ const contactVariant = {
             </motion.h2>
             <motion.span 
                 className="section__subtitle"
-                variants={contactVariant}
+                variants={subTitleVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
@@ -69,16 +38,9 @@ const contactVariant = {
 
             <motion.div 
                 className="contact__container container grid"
-                initial={{
-                    opacity: 0
-                }}
-                whileInView={{
-                    opacity: 1,
-                }}
-                transition={{
-                    delay: 1.7,
-                    duration: 1
-                }}
+                variants={contentVariant}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{once: true}}
             >
                 <div className="contact__content">

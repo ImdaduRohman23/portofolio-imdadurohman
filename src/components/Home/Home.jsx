@@ -18,11 +18,15 @@ const homeVariant = {
 }
 
 const fotoVariant = {
-    hidden: {opacity: 0},
+    hidden: {
+        opacity: 0,
+        scale: 0
+    },
     visible: {
         opacity: 1,
+        scale: 1,
         transition: {
-            duration: 1,
+            duration: 0.7,
             delay: 2.5
         }
     }
