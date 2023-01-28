@@ -1,16 +1,18 @@
 import React from 'react';
 import './qualification.css';
-import porto1 from '../../assets/porto1.svg';
-import porto2 from '../../assets/porto2.png';
-import quran from '../../assets/quran.png';
-import suit from '../../assets/suitjawa.png';
-import todo from '../../assets/todo.png';
-import tontoninaja from '../../assets/tontoninaja.png';
-import hoobank from '../../assets/hoobank.png';
+// import porto1 from '../../assets/porto1.svg';
+// import porto2 from '../../assets/porto2.png';
+// import quran from '../../assets/quran.png';
+// import suit from '../../assets/suitjawa.png';
+// import todo from '../../assets/todo.png';
+// import tontoninaja from '../../assets/tontoninaja.png';
+// import hoobank from '../../assets/hoobank.png';
 import { motion } from 'framer-motion';
 import { titleVariant, subTitleVariant, portoVariant } from '../../utils/motion';
+import { portos } from '../../constant/porto';
 
 const Qualification = () => {
+    console.log(portos)
     return (
         <div className="qualification" id='portofolio'>
             <motion.h2 
@@ -38,24 +40,26 @@ const Qualification = () => {
                 // whileInView="visible"
                 // viewport={{once: true}}
             >
-                <motion.div 
-                    className="porto__item"
-                    variants={portoVariant}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{once: true}}
-                >
-                    <img src={porto1} alt="bcr website costumers" />
-                    <p>
-                        This is an online car rental website which can
-                        display data from the back-end API and can
-                        interact with costumers. This application that built
-                        with React.Js. As a customer in this application
-                        you can search the available car, determine the
-                        ate of renting, and make a payment. (<a href="https://binar-car-rental-platinum.netlify.app" target='blank'>view</a>)
-                    </p>
-                </motion.div>
-                <motion.div 
+                {
+                    portos.map(porto => (
+                        <motion.div 
+                            className="porto__item"
+                            key={porto.id}
+                            variants={portoVariant}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{once: true}}
+                        >
+                            <img src={porto.image} alt="bcr website costumers" />
+                            <p>
+                                {porto.desc}
+                                (<a href={porto.link} target='blank'>view</a>)
+                            </p>
+                        </motion.div>
+                    ))
+                }
+
+                {/* <motion.div 
                     className="porto__item"
                     variants={portoVariant}
                     initial="hidden"
@@ -80,9 +84,7 @@ const Qualification = () => {
                 >
                     <img src={quran} alt="D'Quran web app" />
                     <p>
-                        D'Quran is a digital Al-Quran web application.
-                        This application that built with React JS and uses Context for state management. 
-                        By utilized API data from the Ministry of Religion of the Republic of Indonesia, this application allows users to read and listen the Al-Qur'an based on the selected letter of Qur'an. 
+                        D'Quran is a digital Al-Quran web application. This application that built with React JS and uses Context for state management. By utilized API data from the Ministry of Religion of the Republic of Indonesia, this application allows users to read and listen the Al-Qur'an based on the selected letter of Qur'an. 
                         (<a href="https://d-quran.netlify.app/" target='blank'>view</a>)
                     </p>
                 </motion.div>
@@ -144,7 +146,7 @@ const Qualification = () => {
                     This website that built with React.Js and Tailwindcss so it is very dynamic and responsive to user.  
                     (<a href="https://hoobank-tailwind.netlify.app" target='blank'>view</a>)
                     </p>
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
     )
